@@ -1,0 +1,18 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+rules:
+- name: Spring Boot WebFlux Project
+  globs: ["**/src/main/java/**/*.java", "**/src/main/resources/**/*.yml"]
+  instructions: |
+  - controller代码使用webflux
+  - service接口不要出现webflux
+  - 使用h2文件模式，AUTOSERVER=TRUE
+  - 使用JPA，表前缀使用t_，所有字符型字段必须指定长度
+  - 使用lombok简化代码
+  - 尽可能使用Hutool简化代码及非空及异常判断等，不要重复造轮子,多使用StrUtil,JWTUtil等
+  - 多使用java8的stream和Optional.
+  - 使用公共的统一返回类
+  - 统一异常处理

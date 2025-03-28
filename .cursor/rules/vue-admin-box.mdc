@@ -1,0 +1,20 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+rules:
+- name: Vue Vite Project Setup
+  globs: ["**/*.vue","**/*.ts"]
+  instructions: |
+    - Use Vue 3 with the Composition API for component development.
+    - Configure Vue Router for advanced routing needs to manage page components effectively.
+    - Implement Vuex for state management if complex state requirements arise.
+    - Utilize Vite for project building and bundling to improve performance and faster builds.
+    - Incorporate Element Plus for UI component requirements and consistent design.
+    - Use TypeScript throughout the project for type safety and better integration with Vue and Vite.
+    - Automate imports and component registration using Vite plugins like `unplugin-auto-import` and `unplugin-vue-components`.
+    - Ensure responsiveness and UI consistency using Normalize.css and Tailwind CSS when needed.
+    - Use Axios for HTTP requests ensuring proper error handling and response validation.
+    - Implement proper input validation and sanitization to protect against XSS attacks.
+    - Follow secure coding practices and regularly update dependencies to mitigate vulnerabilities.

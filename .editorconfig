@@ -1,0 +1,42 @@
+# EditorConfig helps maintain consistent coding styles for multiple developers
+# See https://editorconfig.org/
+
+# 顶层配置
+root = true
+
+# 所有文件的基本设置
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+indent_style = space
+indent_size = 2
+
+# TypeScript/JavaScript 文件
+[*.{ts,tsx,js,jsx,json}]
+indent_size = 2
+
+# HTML/CSS/Vue 文件
+[*.{html,css,scss,less,vue}]
+indent_size = 2
+
+# Java 文件
+[*.java]
+indent_size = 4
+
+# XML 文件
+[*.{xml,xsd}]
+indent_size = 4
+
+# 特定配置 - Markdown
+[*.md]
+trim_trailing_whitespace = false
+
+# 特定配置 - YAML
+[*.{yml,yaml}]
+indent_size = 2
+
+# 特定配置 - 属性文件和Shell脚本
+[*.{properties,sh,bat,cmd}]
+indent_size = 2 
