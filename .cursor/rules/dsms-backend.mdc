@@ -1,7 +1,7 @@
 ---
 description: 
 globs: 
-alwaysApply: false
+alwaysApply: true
 ---
 rules:
 - name: Spring Boot WebFlux Project
@@ -16,3 +16,4 @@ rules:
   - 多使用java8的stream和Optional.
   - 使用公共的统一返回类
   - 统一异常处理
+  - controller入参实体需要必要的
