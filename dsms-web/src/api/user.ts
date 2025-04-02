@@ -5,7 +5,6 @@ export function loginApi(data: object) {
   return request({
     url: '/user/login',
     method: 'post',
-    baseURL: '/mock',
     data
   })
 }
@@ -15,7 +14,6 @@ export function getInfoApi(data: object) {
   return request({
     url: '/user/info',
     method: 'post',
-    baseURL: '/mock',
     data
   })
 }
@@ -24,8 +22,7 @@ export function getInfoApi(data: object) {
 export function loginOutApi() {
   return request({
     url: '/user/out',
-    method: 'post',
-    baseURL: '/mock'
+    method: 'post'
   })
 }
 
@@ -33,8 +30,6 @@ export function loginOutApi() {
 export function passwordChange(data: object) {
   return request({
     url: '/user/passwordChange',
-    method: 'post',
-    baseURL: '/mock',
     data
   })
 }
@@ -43,7 +38,6 @@ export function passwordChange(data: object) {
 export function getMenuApi() {
   return request({
     url: '/menu/list',
-    method: 'post',
-    baseURL: '/mock'
+    method: 'post'
   })
 }

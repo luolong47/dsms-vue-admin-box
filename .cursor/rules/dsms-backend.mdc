@@ -1,7 +1,7 @@
 ---
 description: 
-globs: 
-alwaysApply: true
+globs: *.java
+alwaysApply: false
 ---
 rules:
 - name: Spring Boot WebFlux Project
@@ -17,3 +17,4 @@ rules:
   - 使用公共的统一返回类
   - 统一异常处理
   - controller入参实体需要必要的
+  - 完整的javadoc

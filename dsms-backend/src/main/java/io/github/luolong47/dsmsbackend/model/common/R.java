@@ -22,4 +22,10 @@ public class R<T> {
                 .setCode(500)
                 .setMsg(msg);
     }
+
+    public static R<Void> ok() {
+        return new R<Void>()
+            .setCode(200)
+            .setMsg("success");
+    }
 }
