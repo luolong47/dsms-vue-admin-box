@@ -34,8 +34,21 @@ const getComponents = (data: any[], level = 1) => {
         }
       }
     } else {
-      const [first, end] =  item.component.split('_')
-      const component = backConfig[first][end]
+      const [first, end] = item.component.split('_')
+      let component
+
+      // 添加类型安全检查
+      if (backConfig[first as keyof typeof backConfig]) {
+        const moduleConfig = backConfig[first as keyof typeof backConfig]
+        // 字符串索引签名断言
+        component = (moduleConfig as any)[end]
+        if (!component) {
+          console.error(`组件 "${end}" 在 "${first}" 模块中不存在`)
+        }
+      } else {
+        console.error(`模块 "${first}" 在backConfig中不存在`)
+      }
+
       return {
         ...item,
         component,

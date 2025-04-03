@@ -50,6 +50,26 @@ public class DataInitializer implements CommandLineRunner {
         Menu dashboardIndex = createMenu("dashboard", null, "dashboard_dashboard", "首页", "sfont system-home", dashboard.getId(), 1, false, false, true);
         menuRepository.save(dashboardIndex);
         
+        // 创建系统管理菜单
+        Menu systemManage = createMenu("/systemManage", "/systemManage/users", null, "系统管理", "sfont system-shezhi", null, 2, false, false, false);
+        systemManage = menuRepository.save(systemManage);
+        
+        // 系统管理子菜单 - 用户管理
+        Menu users = createMenu("users", null, "main_systemManage_users", "用户管理", "sfont system-yonghuguanli", systemManage.getId(), 1, false, false, true);
+        menuRepository.save(users);
+        
+        // 系统管理子菜单 - 角色管理
+        Menu role = createMenu("role", null, "main_systemManage_role", "角色管理", "sfont system-jiaosepeizhi", systemManage.getId(), 2, false, false, true);
+        menuRepository.save(role);
+        
+        // 系统管理子菜单 - 菜单管理
+        Menu menu = createMenu("menu", null, "main_systemManage_menu", "菜单管理", "sfont system-caidan", systemManage.getId(), 3, false, false, true);
+        menuRepository.save(menu);
+        
+        // 系统管理子菜单 - 字典管理
+        Menu dictionary = createMenu("dictionary", null, "main_systemManage_dictionary", "字典管理", "sfont system-shujuzidian", systemManage.getId(), 4, false, false, true);
+        menuRepository.save(dictionary);
+        
         log.info("菜单数据初始化完成");
     }
 

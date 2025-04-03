@@ -18,3 +18,4 @@ rules:
     - Use Axios for HTTP requests ensuring proper error handling and response validation.
     - Implement proper input validation and sanitization to protect against XSS attacks.
     - Follow secure coding practices and regularly update dependencies to mitigate vulnerabilities.
+    - 使用yarn编译项目
